@@ -1,0 +1,113 @@
+/* Global Styles */
+body {
+    background-color: #1e1e1e; /* Dark mode background */
+    color: #ffffff; /* White text for readability */
+    font-family: Arial, sans-serif; /* Simple and clean font */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Container - Holds the heading and shuffle button */
+.header-container {
+    display: flex; /* Aligns header and button in a row */
+    justify-content: center; /* Centers them horizontally */
+    align-items: center; /* Centers them vertically */
+    gap: 12px; /* Space between heading and button */
+    padding: 0;
+    margin: 0;
+    line-height: 1; /* Reduces extra spacing between text lines */
+}
+
+/* Header Text */
+#header {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+/* Shuffle Button */
+#shuffle-btn {
+    font-size: 18px;
+    padding: 6px 10px; /* Compact button size */
+    border-radius: 50px; /* Makes it rounded */
+    background-color: #b1621890; /* Semi-transparent brownish shade */
+    color: rgb(242, 181, 181); /* Light pink text */
+    border: none;
+    cursor: pointer; /* Pointer cursor for better UX */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+/* Hover Effect for Shuffle Button */
+#shuffle-btn:hover {
+    background-color: #b1621890; /* Keeps the same color */
+    transform: scale(1.1); /* Slightly enlarges on hover */
+}
+
+/* Horizontal Line Under the Header */
+.header-container hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #249de3, #169aeb); /* Blue gradient */
+    width: 100%;
+    max-width: 300px; /* Keeps it from stretching too much */
+    margin: 8px auto;
+}
+
+/* Songs Container - Holds the iframes */
+#songs-container {
+    min-height: 450px; /* Ensures enough space for the iframes */
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column; /* Stacks iframes vertically */
+    align-items: center;
+}
+
+/* iFrame Styling */
+iframe {
+    border: none;
+    width: 90%; /* Makes it responsive */
+    max-width: 500px; /* Prevents it from getting too big */
+    height: 80px; /* Keeps a uniform height */
+    display: block;
+    margin: 5px auto; /* Centers the iframe */
+    overflow: hidden; /* Removes scrollbars */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #bbbbbb; /* Light gray text */
+    padding: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #444; /* Subtle separator */
+    background-color: #1e1e1e; /* Matches body background */
+}
+
+/* MOBILE SCREEN SETTINGS - Adjust layout for smaller screens */
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column; /* Stacks heading and button */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    #header {
+        font-size: 22px; /* Slightly larger for readability */
+    }
+
+    #shuffle-btn {
+        font-size: 18px;
+        padding: 8px 10px;
+    }
+
+    #songs-container {
+        margin-top: 10px;
+    }
+
+    iframe {
+        margin: 10px auto;
+    }
+}
